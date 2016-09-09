@@ -7,14 +7,11 @@
 #
 
 LG=$(setxkbmap -query | awk '/layout/{print $2}') 
-echo -n $LG
 
 if [[ "pl" = "$LG" ]]
 then
-  echo "changing to hu"
   setxkbmap hu
 elif [[ "hu" = "$LG" ]]
 then
-  echo "changing to pl"
   setxkbmap pl
 fi
